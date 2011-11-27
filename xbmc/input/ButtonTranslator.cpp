@@ -882,7 +882,7 @@ void CButtonTranslator::MapWindowActions(TiXmlNode *pWindow, int windowID)
 
   TiXmlNode* pDevice;
 
-  const char* types[] = {"gamepad", "remote", "universalremote", "keyboard", "mouse", "appcommand", NULL};
+  const char* types[] = {"gamepad", "remote", "universalremote", "keyboard", "mouse", "appcommand", "cec", NULL};
   for (int i = 0; types[i]; ++i)
   {
     CStdString type(types[i]);
@@ -915,6 +915,8 @@ void CButtonTranslator::MapWindowActions(TiXmlNode *pWindow, int windowID)
             buttonCode = TranslateMouseCommand(pButton->Value());
         else if (type == "appcommand")
             buttonCode = TranslateAppCommand(pButton->Value());
+        else if (type == "cec")
+            buttonCode = TranslateCecButton(pButton);
 
         if (buttonCode && pButton->FirstChild())
           MapAction(buttonCode, pButton->FirstChild()->Value(), map);
@@ -1214,6 +1216,28 @@ uint32_t CButtonTranslator::TranslateAppCommand(const char *szButton)
 #endif
 
   return 0;
+}
+
+uint32_t CButtonTranslator::TranslateCecButton(TiXmlElement *pButton)
+{
+  uint32_t button_code = 0;
+  const char *szButton = pButton->Value();
+
+  if (!szButton) 
+    return 0;
+  CStdString strKey = szButton;
+  if (strKey.Equals("key"))
+  {
+    int code = 0;
+    if (pButton->QueryIntAttribute("code", &code) == TIXML_SUCCESS)
+      button_code= (uint32_t)code + CEC_BASE_KEY;
+    else
+      CLog::Log(LOGERROR, "CEC Translator: `key' button has no code");
+  }
+  else
+    CLog::Log(LOGERROR, "CEC Translator: Unknown button type: %s", strKey.c_str());
+
+  return button_code;
 }
 
 uint32_t CButtonTranslator::TranslateMouseCommand(const char *szButton)

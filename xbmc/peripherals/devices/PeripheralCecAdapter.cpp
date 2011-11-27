@@ -28,6 +28,7 @@
 #include "threads/SingleLock.h"
 #include "dialogs/GUIDialogKaiToast.h"
 #include "guilib/LocalizeStrings.h"
+#include "guilib/Key.h"
 #include "peripherals/Peripherals.h"
 #include "peripherals/bus/PeripheralBus.h"
 #include "settings/GUISettings.h"
@@ -515,6 +516,8 @@ bool CPeripheralCecAdapter::GetNextKey(void)
   CLog::Log(LOGDEBUG, "%s - received key %2x", __FUNCTION__, key.keycode);
   DWORD iButton = 0;
 
+  iButton = key.keycode + CEC_BASE_KEY;
+#if 0  
   switch (key.keycode)
   {
   case CEC_USER_CONTROL_CODE_SELECT:
@@ -647,9 +650,11 @@ bool CPeripheralCecAdapter::GetNextKey(void)
   case CEC_USER_CONTROL_CODE_F4_YELLOW:
     iButton = XINPUT_IR_REMOTE_YELLOW;
     break;
+  case CEC_USER_CONTROL_CODE_SETUP_MENU:
+    iButton = XINPUT_IR_REMOTE_TITLE;
+    break;
   case CEC_USER_CONTROL_CODE_POWER_ON_FUNCTION:
   case CEC_USER_CONTROL_CODE_EJECT:
-  case CEC_USER_CONTROL_CODE_SETUP_MENU:
   case CEC_USER_CONTROL_CODE_CONTENTS_MENU:
   case CEC_USER_CONTROL_CODE_FAVORITE_MENU:
   case CEC_USER_CONTROL_CODE_DOT:
@@ -684,6 +689,7 @@ bool CPeripheralCecAdapter::GetNextKey(void)
     m_bHasButton = false;
     return false;
   }
+#endif  
 
   if (!m_bHasButton && iButton == m_button.iButton && m_button.iDuration == 0 && key.duration > 0)
   {
