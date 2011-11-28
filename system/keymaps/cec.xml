@@ -1,0 +1,556 @@
+<keymap>
+  <global>
+    <cec>
+      <key code="0x44">Play</key>
+      <key code="0x46">Pause</key>
+      <key code="0x45">Stop</key>
+      <key code="0x49">FastForward</key>
+      <key code="0x48">Rewind</key>
+      <key code="0x03">Left</key>
+      <key code="0x07">Left</key>
+      <key code="0x08">Left</key>
+      <key code="0x04">Right</key>
+      <key code="0x05">Right</key>
+      <key code="0x06">Right</key>
+      <key code="0x01">Up</key>
+      <key code="0x02">Down</key>
+      <key code="0x00">Select</key>
+      <key code="0x2B">FullScreen</key> 
+      <key code="0x37">PageUp</key>
+      <key code="0x30">PageUp</key>
+      <key code="0x38">PageDown</key>
+      <key code="0x30">PageDown</key>
+      <key code="0x09">Back</key>
+      <key code="0x32">Back</key>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x0A">ContextMenu</key>
+      <key code="0x35">Info</key>
+      <key code="0x4B">SkipNext</key>
+      <key code="0x4C">SkipPrevious</key>
+      <key code="0x35">FullScreen</key>
+      <!--<start>PreviousMenu</start>-->
+      <key code="0x47">Screenshot</key>
+      <key code="0x41">VolumeUp</key>
+      <key code="0x42">VolumeDown</key>
+      <key code="0x43">Mute</key>
+      <key code="0x40">XBMC.ShutDown()</key>
+      <!--<myvideo>XBMC.ActivateWindow(MyVideos)</myvideo>-->
+      <!--<mymusic>XBMC.ActivateWindow(MyMusic)</mymusic>-->
+      <!--<mypictures>XBMC.ActivateWindow(MyPictures)</mypictures>-->
+      <!--<mytv>XBMC.ActivateWindow(MyPVR)</mytv>-->
+      <!--<guide>XBMC.ActivateWindowAndFocus(MyPVR, 31,0, 10,0)</guide>-->
+      <!--<livetv>XBMC.ActivateWindowAndFocus(MyPVR, 32,0, 11,0)</livetv>-->
+      <!--<liveradio>XBMC.ActivateWindowAndFocus(MyPVR, 33,0,
+	   12,0)</liveradio>-->
+      <!--<recordedtv>XBMC.ActivateWindowAndFocus(MyPVR, 34,0, 13,0)</recordedtv>-->
+      <!--<epgsearch>XBMC.ActivateWindowAndFocus(MyPVR, 35,0,
+	   14,0)</epgsearch>-->
+      <key code="0x72">XBMC.ActivateWindow(MyPVR)</key>
+      <key code="0x73">XBMC.ActivateWindow(MyVideos)</key>
+      <key code="0x74">XBMC.ActivateWindow(MyMusic)</key>
+      <key code="0x71">XBMC.ActivateWindow(MyPictures)</key>
+      <key code="0x20">Number0</key>
+      <key code="0x21">Number1</key>
+      <key code="0x22">JumpSMS2</key>
+      <key code="0x23">JumpSMS3</key>
+      <key code="0x24">JumpSMS4</key>
+      <key code="0x25">JumpSMS5</key>
+      <key code="0x26">JumpSMS6</key>
+      <key code="0x27">JumpSMS7</key>
+      <key code="0x28">JumpSMS8</key>
+      <key code="0x29">JumpSMS9</key>
+    </cec>
+  </global>
+  <Home>
+    <cec>
+      <key code="0x35">XBMC.ActivateWindow(SystemInfo)</key>
+      <key code="0x2C">XBMC.ActivateWindow(Weather)</key>
+      <!--<hash>XBMC.ActivateWindow(Settings)</hash>-->
+    </cec>
+  </Home>
+  <MyTV>
+    <cec>
+      <key code="0x2C">Delete</key>
+    </cec>
+  </MyTV>
+  <MyFiles>
+    <cec>
+      <key code="0x2C">Delete</key>
+      <key code="0x20">Highlight</key>
+      <!--<star>Move</star>-->
+      <!--<hash>Rename</hash>-->
+    </cec>
+  </MyFiles>
+  <MyMusicPlaylist>
+    <cec>
+      <key code="0x2C">Delete</key>
+      <key code="0x20">Delete</key>
+    </cec>
+  </MyMusicPlaylist>
+  <MyMusicPlaylistEditor>
+    <cec>
+      <key code="0x20">Queue</key>
+    </cec>
+  </MyMusicPlaylistEditor>
+  <MyMusicFiles>
+    <cec>
+      <key code="0x20">Queue</key>
+      <!--<star>Queue</star>-->
+    </cec>
+  </MyMusicFiles>
+  <MyMusicLibrary>
+    <cec>
+      <key code="0x20">Queue</key>
+      <!--<star>Queue</star>-->
+    </cec>
+  </MyMusicLibrary>
+  <FullscreenVideo>
+    <cec>
+      <key code="0x20">Number0</key>
+      <key code="0x21">Number1</key>
+      <key code="0x22">Number2</key>
+      <key code="0x23">Number3</key>
+      <key code="0x24">Number4</key>
+      <key code="0x25">Number5</key>
+      <key code="0x26">Number6</key>
+      <key code="0x27">Number7</key>
+      <key code="0x28">Number8</key>
+      <key code="0x29">Number9</key>
+      <key code="0x03">StepBack</key>
+      <key code="0x07">StepBack</key>
+      <key code="0x08">StepBack</key>
+      <key code="0x04">StepForward</key>
+      <key code="0x05">StepForward</key>
+      <key code="0x06">StepForward</key>
+      <key code="0x01">BigStepForward</key>
+      <key code="0x02">BigStepBack</key>
+      <key code="0x09">SmallStepBack</key>
+      <key code="0x32">SmallStepBack</key>
+      <key code="0x09">OSD</key>
+      <!--<start>OSD</start>-->
+      <key code="0x00">AspectRatio</key>
+      <key code="0x0A">CodecInfo</key>
+      <key code="0x35">Info</key>
+      <!--<guide>XBMC.ActivateWindow(PVROSDGuide)</guide>-->
+      <!--<teletext>XBMC.ActivateWindow(Teletext)</teletext>-->
+      <!--<subtitle>NextSubtitle</subtitle>-->
+      <!--<star>NextSubtitle</star>-->
+      <key code="0x33">AudioNextLanguage</key>
+      <!--<playlist>Playlist</playlist>-->
+      <key code="0x33">Language</key>
+      <!--<hash>AudioNextLanguage</hash>-->
+    </cec>
+  </FullscreenVideo>
+  <VideoTimeSeek>
+    <cec>
+      <key code="0x00">Select</key>
+      <key code="0x2B">Select</key>
+    </cec>
+  </VideoTimeSeek>
+  <FullscreenInfo>
+    <cec>
+      <key code="0x0A">CodecInfo</key>
+      <key code="0x35">Back</key>
+      <key code="0x09">OSD</key>
+    </cec>
+  </FullscreenInfo>
+  <PlayerControls>
+    <cec>
+      <key code="0x09">Back</key>
+    </cec>
+  </PlayerControls>
+  <Visualisation>
+    <cec>
+      <key code="0x03">PreviousPreset</key>
+      <key code="0x07">PreviousPreset</key>
+      <key code="0x08">PreviousPreset</key>
+      <key code="0x04">NextPreset</key>
+      <key code="0x05">NextPreset</key>
+      <key code="0x06">NextPreset</key>
+      <key code="0x01">IncreaseRating</key>
+      <key code="0x02">DecreaseRating</key>
+      <key code="0x09">LockPreset</key>
+      <key code="0x32">LockPreset</key>
+      <key code="0x0A">CodecInfo</key>
+      <key code="0x00">XBMC.ActivateWindow(VisualisationPresetList)</key>
+      <key code="0x09">XBMC.ActivateWindow(MusicOSD)</key>
+      <!--<start>XBMC.ActivateWindow(MusicOSD)</start>-->
+      <key code="0x35">Info</key>
+      <!--<guide>XBMC.ActivateWindow(PVROSDGuide)</guide>-->
+      <!--<playlist>XBMC.ActivateWindow(PVROSDChannels)</playlist>-->
+    </cec>
+  </Visualisation>
+  <MusicOSD>
+    <cec>
+      <key code="0x09">Back</key>
+      <key code="0x0A">Info</key>
+      <key code="0x35">CodecInfo</key>
+    </cec>
+  </MusicOSD>
+  <VisualisationSettings>
+    <cec>
+      <key code="0x09">Back</key>
+    </cec>
+  </VisualisationSettings>
+  <VisualisationPresetList>
+    <cec>
+      <key code="0x09">Back</key>
+    </cec>
+  </VisualisationPresetList>
+  <SlideShow>
+    <cec>
+      <key code="0x20">ZoomNormal</key>
+      <key code="0x21">ZoomLevel1</key>
+      <key code="0x22">ZoomLevel2</key>
+      <key code="0x23">ZoomLevel3</key>
+      <key code="0x24">ZoomLevel4</key>
+      <key code="0x25">ZoomLevel5</key>
+      <key code="0x26">ZoomLevel6</key>
+      <key code="0x27">ZoomLevel7</key>
+      <key code="0x28">ZoomLevel8</key>
+      <key code="0x29">ZoomLevel9</key>
+      <key code="0x35">CodecInfo</key>
+      <key code="0x4B">NextPicture</key>
+      <key code="0x4C">PreviousPicture</key>
+      <key code="0x0A">Info</key>
+      <key code="0x00">Rotate</key>
+    </cec>
+  </SlideShow>
+  <ScreenCalibration>
+    <cec>
+      <key code="0x00">NextCalibration</key>
+      <key code="0x20">ResetCalibration</key>
+      <key code="0x35">NextResolution</key>
+      <!--<xbox>NextResolution</xbox>-->
+    </cec>
+  </ScreenCalibration>
+  <GUICalibration>
+    <cec>
+      <key code="0x00">NextCalibration</key>
+      <key code="0x20">ResetCalibration</key>
+    </cec>
+  </GUICalibration>
+  <VideoOSD>
+    <cec>
+      <key code="0x09">Back</key>
+      <!--<start>Back</start>-->
+    </cec>
+  </VideoOSD>
+  <VideoMenu>
+    <cec>
+      <key code="0x09">OSD</key>
+      <key code="0x35">Info</key>
+      <key code="0x0A">CodecInfo</key>
+      <key code="0x20">Number0</key>
+      <key code="0x21">Number1</key>
+      <key code="0x22">Number2</key>
+      <key code="0x23">Number3</key>
+      <key code="0x24">Number4</key>
+      <key code="0x25">Number5</key>
+      <key code="0x26">Number6</key>
+      <key code="0x27">Number7</key>
+      <key code="0x28">Number8</key>
+      <key code="0x29">Number9</key>
+      <key code="0x44">Select</key>
+    </cec>
+  </VideoMenu>
+  <OSDVideoSettings>
+    <cec>
+      <key code="0x09">Back</key>
+      <!--<start>Back</start>-->
+    </cec>
+  </OSDVideoSettings>
+  <OSDAudioSettings>
+    <cec>
+      <key code="0x09">Back</key>
+      <!--<start>Back</start>-->
+    </cec>
+  </OSDAudioSettings>
+  <VideoBookmarks>
+    <cec>
+      <key code="0x09">Back</key>
+      <!--<start>Back</start>-->
+      <key code="0x20">Delete</key>
+    </cec>
+  </VideoBookmarks>
+  <MyVideoLibrary>
+    <cec>
+      <key code="0x20">Queue</key>
+      <key code="0x2C">Delete</key>
+    </cec>
+  </MyVideoLibrary>
+  <MyVideoFiles>
+    <cec>
+      <key code="0x20">Queue</key>
+      <!--<star>Queue</star>-->
+    </cec>
+  </MyVideoFiles>
+  <MyVideoPlaylist>
+    <cec>
+      <key code="0x2C">Delete</key>
+      <key code="0x20">Delete</key>
+    </cec>
+  </MyVideoPlaylist>
+  <VirtualKeyboard>
+    <cec>
+      <key code="0x09">BackSpace</key>
+      <key code="0x32">BackSpace</key>
+      <!--<star>Shift</star>-->
+      <!--<hash>Symbols</hash>-->
+      <key code="0x20">Number0</key>
+      <key code="0x21">Number1</key>
+      <key code="0x22">Number2</key>
+      <key code="0x23">Number3</key>
+      <key code="0x24">Number4</key>
+      <key code="0x25">Number5</key>
+      <key code="0x26">Number6</key>
+      <key code="0x27">Number7</key>
+      <key code="0x28">Number8</key>
+      <key code="0x29">Number9</key>
+      <key code="0x2B">Enter</key>
+      <key code="0x38">CursorLeft</key>
+      <key code="0x30">CursorLeft</key>
+      <key code="0x37">CursorRight</key>
+      <key code="0x30">CursorRight</key>
+    </cec>
+  </VirtualKeyboard>
+  <ContextMenu>
+    <cec>
+      <key code="0x0A">Back</key>
+    </cec>
+  </ContextMenu>
+  <Scripts>
+    <cec>
+      <key code="0x35">info</key>
+    </cec>
+  </Scripts>
+  <NumericInput>
+    <cec>
+      <key code="0x20">Number0</key>
+      <key code="0x21">Number1</key>
+      <key code="0x22">Number2</key>
+      <key code="0x23">Number3</key>
+      <key code="0x24">Number4</key>
+      <key code="0x25">Number5</key>
+      <key code="0x26">Number6</key>
+      <key code="0x27">Number7</key>
+      <key code="0x28">Number8</key>
+      <key code="0x29">Number9</key>
+      <key code="0x2B">Enter</key>
+      <key code="0x09">BackSpace</key>
+      <key code="0x32">BackSpace</key>
+    </cec>
+  </NumericInput>
+  <Weather>
+    <cec>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x32">PreviousMenu</key>
+    </cec>
+  </Weather>
+  <TV>
+    <cec>
+      <key code="0x72">Red</key>
+      <key code="0x73">Green</key>
+      <key code="0x74">Yellow</key>
+      <key code="0x71">Blue</key>
+    </cec>
+  </TV>
+  <Settings>
+    <cec>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x32">PreviousMenu</key>
+    </cec>
+  </Settings>
+  <AddonBrowser>
+    <cec>
+    </cec>
+  </AddonBrowser>
+  <AddonInformation>
+    <cec>
+      <key code="0x09">Close</key>
+      <key code="0x32">Close</key>
+    </cec>
+  </AddonInformation>
+  <AddonSettings>
+    <cec>
+      <key code="0x09">Close</key>
+      <key code="0x32">Close</key>
+    </cec>
+  </AddonSettings>
+  <TextViewer>
+    <cec>
+      <key code="0x09">Close</key>
+      <key code="0x32">Close</key>
+    </cec>
+  </TextViewer>
+  <MyPicturesSettings>
+    <cec>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x32">PreviousMenu</key>
+    </cec>
+  </MyPicturesSettings>
+  <MyProgramsSettings>
+    <cec>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x32">PreviousMenu</key>
+    </cec>
+  </MyProgramsSettings>
+  <MyWeatherSettings>
+    <cec>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x32">PreviousMenu</key>
+    </cec>
+  </MyWeatherSettings>
+  <MyMusicSettings>
+    <cec>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x32">PreviousMenu</key>
+    </cec>
+  </MyMusicSettings>
+  <SystemSettings>
+    <cec>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x32">PreviousMenu</key>
+    </cec>
+  </SystemSettings>
+  <MyVideosSettings>
+    <cec>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x32">PreviousMenu</key>
+    </cec>
+  </MyVideosSettings>
+  <NetworkSettings>
+    <cec>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x32">PreviousMenu</key>
+    </cec>
+  </NetworkSettings>
+  <AppearanceSettings>
+    <cec>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x32">PreviousMenu</key>
+    </cec>
+  </AppearanceSettings>
+  <Profiles>
+    <cec>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x32">PreviousMenu</key>
+    </cec>
+  </Profiles>
+  <systeminfo>
+    <cec>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x32">PreviousMenu</key>
+    </cec>
+  </systeminfo>
+  <shutdownmenu>
+    <cec>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x32">PreviousMenu</key>
+    </cec>
+  </shutdownmenu>
+  <submenu>
+    <cec>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x32">PreviousMenu</key>
+    </cec>
+  </submenu>
+  <MusicInformation>
+    <cec>
+      <key code="0x35">Back</key>
+    </cec>
+  </MusicInformation>
+  <MovieInformation>
+    <cec>
+      <key code="0x35">Back</key>
+    </cec>
+  </MovieInformation>
+  <LockSettings>
+    <cec>
+      <key code="0x09">Back</key>
+    </cec>
+  </LockSettings>
+  <ProfileSettings>
+    <cec>
+      <key code="0x09">Back</key>
+    </cec>
+  </ProfileSettings>
+  <PictureInfo>
+    <cec>
+      <key code="0x4B">NextPicture</key>
+      <key code="0x4C">PreviousPicture</key>
+      <key code="0x35">Back</key>
+    </cec>
+  </PictureInfo>
+  <Teletext>
+    <cec>
+      <key code="0x20">number0</key>
+      <key code="0x21">number1</key>
+      <key code="0x22">number2</key>
+      <key code="0x23">number3</key>
+      <key code="0x24">number4</key>
+      <key code="0x25">number5</key>
+      <key code="0x26">number6</key>
+      <key code="0x27">number7</key>
+      <key code="0x28">number8</key>
+      <key code="0x29">number9</key>
+      <key code="0x72">Red</key>
+      <key code="0x73">Green</key>
+      <key code="0x74">Yellow</key>
+      <key code="0x71">Blue</key>
+      <key code="0x35">Info</key>
+      <key code="0x09">Back</key>
+      <!--<start>Back</start>-->
+      <!--<teletext>Back</teletext>-->
+    </cec>
+  </Teletext>
+  <Favourites>
+    <cec>
+      <key code="0x09">Close</key>
+      <key code="0x32">Close</key>
+    </cec>
+  </Favourites>
+  <PVROSDChannels>
+    <cec>
+      <key code="0x09">Close</key>
+      <key code="0x32">Close</key>
+      <key code="0x09">Close</key>
+      <!--<start>Close</start>-->
+      <!--<playlist>Close</playlist>-->
+    </cec>
+  </PVROSDChannels>
+  <PVROSDGuide>
+    <cec>
+      <key code="0x09">Close</key>
+      <key code="0x32">Close</key>
+      <key code="0x09">Close</key>
+      <!--<start>Close</start>-->
+      <!--<guide>Close</guide>-->
+    </cec>
+  </PVROSDGuide>
+  <PVROSDDirector>
+    <cec>
+      <key code="0x09">Close</key>
+      <key code="0x32">Close</key>
+      <key code="0x09">Close</key>
+    </cec>
+  </PVROSDDirector>
+  <PVROSDCutter>
+    <cec>
+      <key code="0x09">Close</key>
+      <key code="0x32">Close</key>
+      <key code="0x09">Close</key>
+    </cec>
+  </PVROSDCutter>
+  <MyTVSettings>
+    <cec>
+      <key code="0x09">PreviousMenu</key>
+      <key code="0x32">PreviousMenu</key>
+    </cec>
+  </MyTVSettings>
+  <AddonSettings>
+    <cec>
+      <key code="0x2C">Delete</key>
+    </cec>
+  </AddonSettings>
+</keymap>

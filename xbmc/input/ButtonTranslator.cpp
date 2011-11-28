@@ -1135,7 +1135,6 @@ uint32_t CButtonTranslator::TranslateRemoteString(const char *szButton)
   else if (strButton.Equals("enter")) buttonCode = XINPUT_IR_REMOTE_ENTER;
   else if (strButton.Equals("xbox")) buttonCode = XINPUT_IR_REMOTE_DISPLAY; // same as display
   else if (strButton.Equals("playlist")) buttonCode = XINPUT_IR_REMOTE_PLAYLIST;
-  else if (strButton.Equals("guide")) buttonCode = XINPUT_IR_REMOTE_GUIDE;
   else if (strButton.Equals("teletext")) buttonCode = XINPUT_IR_REMOTE_TELETEXT;
   else if (strButton.Equals("red")) buttonCode = XINPUT_IR_REMOTE_RED;
   else if (strButton.Equals("green")) buttonCode = XINPUT_IR_REMOTE_GREEN;
@@ -1255,9 +1254,12 @@ uint32_t CButtonTranslator::TranslateCecButton(TiXmlElement *pButton)
   CStdString strKey = szButton;
   if (strKey.Equals("key"))
   {
-    int code = 0;
-    if (pButton->QueryIntAttribute("code", &code) == TIXML_SUCCESS)
-      button_code= (uint32_t)code + CEC_BASE_KEY;
+    const char *szCode;
+    if ((szCode = pButton->Attribute("code")))
+    {
+      button_code= (uint32_t)strtoul(szCode, NULL, 0) + CEC_BASE_KEY;
+      CLog::Log(LOGDEBUG, "CEC Translator: button code 0x%X", button_code);
+    }
     else
       CLog::Log(LOGERROR, "CEC Translator: `key' button has no code");
   }
