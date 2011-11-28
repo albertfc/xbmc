@@ -112,6 +112,8 @@ private:
 
   static uint32_t TranslateAppCommand(const char *szButton);
 
+  static uint32_t TranslateCecButton(TiXmlElement *pButton);
+
   void MapWindowActions(TiXmlNode *pWindow, int wWindowID);
   void MapAction(uint32_t buttonCode, const char *szAction, buttonMap &map);
 

@@ -28,6 +28,7 @@
 #include "threads/SingleLock.h"
 #include "dialogs/GUIDialogKaiToast.h"
 #include "guilib/LocalizeStrings.h"
+#include "guilib/Key.h"
 #include "peripherals/Peripherals.h"
 #include "peripherals/bus/PeripheralBus.h"
 #include "settings/GUISettings.h"
@@ -259,30 +260,23 @@ void CPeripheralCecAdapter::Process(void)
 
   CLog::Log(LOGDEBUG, "%s - connection to the CEC adapter opened", __FUNCTION__);
 
-  /* get the vendor id directly after connecting, because the TV might be using a non-standard CEC implementation */
-  m_cecAdapter->GetDeviceVendorId(CECDEVICE_TV);
-
   m_bIsReady = true;
   CAnnouncementManager::AddAnnouncer(this);
+
+  if (GetSettingBool("cec_power_on_startup"))
+  {
+    PowerOnCecDevices(CECDEVICE_TV);
+    FlushLog();
+  }
+
+  /* get the vendor id directly after connecting, because the TV might be using a non-standard CEC implementation */
+  m_cecAdapter->GetDeviceVendorId(CECDEVICE_TV);
 
   // set correct physical address from peripheral settings
   int iHdmiPort = GetSettingInt("cec_hdmi_port");
   if (iHdmiPort <= 0 || iHdmiPort > 16)
     iHdmiPort = 1;
   m_cecAdapter->SetPhysicalAddress((uint16_t) (iHdmiPort << 12));
-
-  FlushLog();
-
-  if (GetSettingBool("cec_power_on_startup"))
-  {
-    cec_power_status status = m_cecAdapter->GetDevicePowerStatus(CECDEVICE_TV);
-    if (status == CEC_POWER_STATUS_STANDBY ||
-        status == CEC_POWER_STATUS_IN_TRANSITION_ON_TO_STANDBY)
-      PowerOnCecDevices(CECDEVICE_TV);
-    FlushLog();
-  }
-
-  m_cecAdapter->SetActiveView();
   FlushLog();
 
   if (GetSettingBool("use_tv_menu_language"))
@@ -522,6 +516,8 @@ bool CPeripheralCecAdapter::GetNextKey(void)
   CLog::Log(LOGDEBUG, "%s - received key %2x", __FUNCTION__, key.keycode);
   DWORD iButton = 0;
 
+  iButton = key.keycode + CEC_BASE_KEY;
+#if 0  
   switch (key.keycode)
   {
   case CEC_USER_CONTROL_CODE_SELECT:
@@ -654,9 +650,11 @@ bool CPeripheralCecAdapter::GetNextKey(void)
   case CEC_USER_CONTROL_CODE_F4_YELLOW:
     iButton = XINPUT_IR_REMOTE_YELLOW;
     break;
+  case CEC_USER_CONTROL_CODE_SETUP_MENU:
+    iButton = XINPUT_IR_REMOTE_TITLE;
+    break;
   case CEC_USER_CONTROL_CODE_POWER_ON_FUNCTION:
   case CEC_USER_CONTROL_CODE_EJECT:
-  case CEC_USER_CONTROL_CODE_SETUP_MENU:
   case CEC_USER_CONTROL_CODE_CONTENTS_MENU:
   case CEC_USER_CONTROL_CODE_FAVORITE_MENU:
   case CEC_USER_CONTROL_CODE_DOT:
@@ -691,6 +689,7 @@ bool CPeripheralCecAdapter::GetNextKey(void)
     m_bHasButton = false;
     return false;
   }
+#endif  
 
   if (!m_bHasButton && iButton == m_button.iButton && m_button.iDuration == 0 && key.duration > 0)
   {
