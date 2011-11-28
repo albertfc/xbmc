@@ -20,7 +20,7 @@
       <key code="0x30">PageUp</key>
       <key code="0x38">PageDown</key>
       <key code="0x30">PageDown</key>
-      <key code="0x09">Back</key>
+      <key code="0x0D">Back</key>
       <key code="0x32">Back</key>
       <key code="0x09">PreviousMenu</key>
       <key code="0x0A">ContextMenu</key>
@@ -156,7 +156,8 @@
   </FullscreenInfo>
   <PlayerControls>
     <cec>
-      <key code="0x09">Back</key>
+      <key code="0x0D">Back</key>
+      <key code="0x32">Back</key>
     </cec>
   </PlayerControls>
   <Visualisation>
@@ -182,19 +183,22 @@
   </Visualisation>
   <MusicOSD>
     <cec>
-      <key code="0x09">Back</key>
+      <key code="0x0D">Back</key>
+      <key code="0x32">Back</key>
       <key code="0x0A">Info</key>
       <key code="0x35">CodecInfo</key>
     </cec>
   </MusicOSD>
   <VisualisationSettings>
     <cec>
-      <key code="0x09">Back</key>
+      <key code="0x0D">Back</key>
+      <key code="0x32">Back</key>
     </cec>
   </VisualisationSettings>
   <VisualisationPresetList>
     <cec>
-      <key code="0x09">Back</key>
+      <key code="0x0D">Back</key>
+      <key code="0x32">Back</key>
     </cec>
   </VisualisationPresetList>
   <SlideShow>
@@ -232,7 +236,8 @@
   </GUICalibration>
   <VideoOSD>
     <cec>
-      <key code="0x09">Back</key>
+      <key code="0x0D">Back</key>
+      <key code="0x32">Back</key>
       <!--<start>Back</start>-->
     </cec>
   </VideoOSD>
@@ -256,19 +261,22 @@
   </VideoMenu>
   <OSDVideoSettings>
     <cec>
-      <key code="0x09">Back</key>
+      <key code="0x0D">Back</key>
+      <key code="0x32">Back</key>
       <!--<start>Back</start>-->
     </cec>
   </OSDVideoSettings>
   <OSDAudioSettings>
     <cec>
-      <key code="0x09">Back</key>
+      <key code="0x0D">Back</key>
+      <key code="0x32">Back</key>
       <!--<start>Back</start>-->
     </cec>
   </OSDAudioSettings>
   <VideoBookmarks>
     <cec>
-      <key code="0x09">Back</key>
+      <key code="0x0D">Back</key>
+      <key code="0x32">Back</key>
       <!--<start>Back</start>-->
       <key code="0x20">Delete</key>
     </cec>
@@ -467,12 +475,14 @@
   </MovieInformation>
   <LockSettings>
     <cec>
-      <key code="0x09">Back</key>
+      <key code="0x0D">Back</key>
+      <key code="0x32">Back</key>
     </cec>
   </LockSettings>
   <ProfileSettings>
     <cec>
-      <key code="0x09">Back</key>
+      <key code="0x0D">Back</key>
+      <key code="0x32">Back</key>
     </cec>
   </ProfileSettings>
   <PictureInfo>
@@ -499,7 +509,8 @@
       <key code="0x74">Yellow</key>
       <key code="0x71">Blue</key>
       <key code="0x35">Info</key>
-      <key code="0x09">Back</key>
+      <key code="0x0D">Back</key>
+      <key code="0x32">Back</key>
       <!--<start>Back</start>-->
       <!--<teletext>Back</teletext>-->
     </cec>
