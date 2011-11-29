@@ -28,7 +28,6 @@
 #include "threads/SingleLock.h"
 #include "dialogs/GUIDialogKaiToast.h"
 #include "guilib/LocalizeStrings.h"
-#include "guilib/Key.h"
 #include "peripherals/Peripherals.h"
 #include "peripherals/bus/PeripheralBus.h"
 #include "settings/GUISettings.h"
@@ -516,7 +515,7 @@ bool CPeripheralCecAdapter::GetNextKey(void)
   CLog::Log(LOGDEBUG, "%s - received key %2x", __FUNCTION__, key.keycode);
   DWORD iButton = 0;
 
-  iButton = key.keycode + CEC_BASE_KEY;
+  iButton = key.keycode;
 
   if (!m_bHasButton && iButton == m_button.iButton && m_button.iDuration == 0 && key.duration > 0)
   {

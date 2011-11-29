@@ -2877,7 +2877,7 @@ bool CApplication::ProcessPeripherals(float frameTime)
       CPeripheralCecAdapter *cecDevice = (CPeripheralCecAdapter *) peripherals.at(iPeripheralPtr);
       if (cecDevice && cecDevice->GetButton())
       {
-        CKey key(cecDevice->GetButton(), cecDevice->GetHoldTime());
+        CKey key(cecDevice->GetButton() | KEY_CEC, cecDevice->GetHoldTime());
         cecDevice->ResetButton();
         return OnKey(key);
       }

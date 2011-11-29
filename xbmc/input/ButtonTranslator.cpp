@@ -1247,6 +1247,7 @@ uint32_t CButtonTranslator::TranslateAppCommand(const char *szButton)
 uint32_t CButtonTranslator::TranslateCecButton(TiXmlElement *pButton)
 {
   uint32_t button_code = 0;
+#ifdef HAVE_LIBCEC
   const char *szButton = pButton->Value();
 
   if (!szButton) 
@@ -1256,15 +1257,13 @@ uint32_t CButtonTranslator::TranslateCecButton(TiXmlElement *pButton)
   {
     const char *szCode;
     if ((szCode = pButton->Attribute("code")))
-    {
-      button_code= (uint32_t)strtoul(szCode, NULL, 0) + CEC_BASE_KEY;
-      CLog::Log(LOGDEBUG, "CEC Translator: button code 0x%X", button_code);
-    }
+      button_code = (uint32_t)strtoul(szCode, NULL, 0) | KEY_CEC;
     else
       CLog::Log(LOGERROR, "CEC Translator: `key' button has no code");
   }
   else
     CLog::Log(LOGERROR, "CEC Translator: Unknown button type: %s", strKey.c_str());
+#endif
 
   return button_code;
 }

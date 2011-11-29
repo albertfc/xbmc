@@ -82,8 +82,8 @@
 // 0xD000 -> 0xD0FF is reserved for WM_APPCOMMAND messages
 #define KEY_APPCOMMAND      0xD000
 
-// CEC base key code
-#define CEC_BASE_KEY	    0xA000
+// OxC000 -> 0xC0FF is reserved for CEC user controls codes
+#define KEY_CEC     	    0xA000
 
 #define KEY_INVALID         0xFFFF
 
